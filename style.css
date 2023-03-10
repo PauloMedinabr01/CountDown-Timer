@@ -6,7 +6,7 @@
 
 body {
   background: url(https://mir-s3-cdn-cf.behance.net/project_modules/disp/e29ccc95910113.5face8c671539.gif) no-repeat left center,
-              url(https://mir-s3-cdn-cf.behance.net/project_modules/disp/0c0c5895910113.5fb0c66b4bc1d.gif) no-repeat right center;
+    url(https://mir-s3-cdn-cf.behance.net/project_modules/disp/0c0c5895910113.5fb0c66b4bc1d.gif) no-repeat right center;
   background-color: #000;
   display: flex;
   flex-direction: column;
@@ -18,30 +18,26 @@ body {
   font-size: 10px;
 }
 
-h2 {
+h1 {
   text-align: center;
   margin-bottom: 2rem;
   font-size: 3rem;
 }
 
-.cd_timer {
+.clock-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   text-align: center;
 }
 
-.cd_container {
+.clock-container .time-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 1rem;
-  flex-basis: 0;
-  flex-grow: 1;
-  max-width: 20rem;
+  flex-direction: row;
+  justify-content: center;
 }
 
-.cd_container .time {
+.clock-container .time-container .time {
   font-weight: bold;
   padding: 1rem 2rem;
   font-size: 3rem;
@@ -50,43 +46,36 @@ h2 {
   margin-bottom: 1rem;
 }
 
-.cd_container span {
+.clock-container .time-container .time_text {
+  margin-top: 0.5rem;
   font-size: 1rem;
   font-weight: bold;
   color: #ccc;
 }
 
-.cd_container .time_text {
-  margin-top: 0.5rem;
-}
-
-.time {
-  width: 16rem;
-}
-
-.hour {
-  margin-right: 2rem;
-}
-
-.date {
-  margin-top: auto;
+.clock-container .date-container {
+  position: absolute;
+  bottom: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ccc;
 }
 
 @media (max-width: 768px) {
-  h2 {
+  h1 {
     font-size: 2.5rem;
   }
-  
-  .cd_container {
+
+  .clock-container {
     margin: 0.5rem;
   }
 
-  .time {
+  .clock-container .time-container .time {
     font-size: 2.5rem;
     padding: 0.8rem 1.6rem;
   }
 
-  .cd_container .time_text {
+  .clock-container .time-container .time_text {
     margin-top: 0.3rem;
   }
 }
